@@ -21,3 +21,4 @@ VALUES
     ("Hiking boot", "Sports & Outdoors", 58.99, 35),
     ("Coconut Milk", "Fresh", 2.99, 120),
     ("Baby Spinach", "Fresh", 1.99, 50);
+    
