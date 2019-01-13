@@ -45,9 +45,11 @@ inquirer
             }
             else
             {
-                connection.query("UPDATE products SET stock_quantity=" + (result[0].stock_quantity - count) + " WHERE item_id =" + ID, function(err, res){
+                var stock = result[0].stock_quantity - count;
+                var total = count * result[0].price;
+                connection.query("UPDATE products SET stock_quantity=" + stock + ", product_sales = " + (result[0].product_sales + total) +" WHERE item_id =" + ID, function(err, res){
                     if(err) throw err;
-                    console.log("Your total will be: " + count * result[0].price);
+                    console.log("Your total will be: " + total);
                 });
             }
         });

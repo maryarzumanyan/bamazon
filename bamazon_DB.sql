@@ -22,3 +22,20 @@ VALUES
     ("Coconut Milk", "Fresh", 2.99, 120),
     ("Baby Spinach", "Fresh", 1.99, 50);
     
+    
+CREATE TABLE departments(
+department_id INTEGER auto_increment primary key,
+department_name VARCHAR(50),
+over_head_costs FLOAT
+);
+
+ALTER TABLE products
+  ADD product_sales FLOAT;
+
+INSERT INTO departments
+	(department_name, over_head_costs)
+VALUES
+	("Devices", 1000 ),
+    ("Home", 2000),
+    ("Sports & Outdoors", 500),
+    ("Fresh", 1000);
